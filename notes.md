@@ -24,5 +24,54 @@ const stringToUrl = (string) => {
 }
 <!-- as a recursive function -->
 
+const stringToUrl = (string) => {
+  let result;
+  if string.includes(' ') {
+    return string.slice(string.indexOf(' '))
+  }
+}
 
+
+<!--  -->
 ## Prompt 2
+
+* Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
+
+* Example
+
+* Input: [7, 9, "hi", 12, "hi" 7, 53]
+
+* Output: [7, 9, "hi", 12, 53]
+const array = [7, 9, "hi", 12, "hi" 7, 53]
+
+const dupeFilter = (array) => {
+  let results = [];
+  for (let i = 0; i < array.length; i++) {
+    if (results.includes(array[i]) === false) {
+      results.push(array[i])
+    } else {
+      continue
+    }
+  }
+  return results
+}
+
+<!-- and recursively -->
+
+
+## Prompt 3
+
+* Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
+
+* Example
+
+* Input: "aaabccdddda"
+
+* Output: "3ab2c4da"
+
+const stringComp = (string) => {
+  array = string.split('')
+  const stringCheck = (array) => {
+    
+  }
+}
