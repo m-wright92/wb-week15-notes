@@ -70,8 +70,42 @@ const dupeFilter = (array) => {
 * Output: "3ab2c4da"
 
 const stringComp = (string) => {
-  array = string.split('')
-  const stringCheck = (array) => {
-    
+  if(string.length == 0) {
+    console.log('Please enter a valid string')
+    return
   }
+  let result = '';
+  let count = 0;
+  for(let i = 0; i < string.lenth; i++) {
+    count ++;
+    if(string[i] != string[i + 1]) {
+      output += string[i] + count;
+      count = 0;
+    }
+  }
+  return result;
+}
+
+<!-- without counting single letters -->
+
+const stringComp = (string) => {
+  if(string.length == 0) {
+    console.log('Please enter a valid string')
+    return
+  }
+  let result = '';
+  let count = 0;
+  for(let i = 0; i < string.lenth; i++) {
+    if(string[i] == string[i + 1]) {
+      count ++;
+    }else if(string[i] != string[i + 1]) {
+      if(count == 0) {
+        output += string[i];
+      }else {
+        output += string[i] + count;
+      count = 0;
+      }
+    }
+  }
+  return result;
 }

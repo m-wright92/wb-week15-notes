@@ -1,0 +1,65 @@
+Whiteboard Prompt #3
+
+Algorithm takes strings and compresses each recurring string into a number
+
+Input: aaa
+Output: 3a
+If single letter, just return the letter
+Only counts number of occurrences directly next to each other
+Javascript
+
+Can make array
+
+W/o recursion
+
+Const stringCompress = (string) => {
+	if(string.length === 0) {
+		alert("please enter a valid string");
+		return;
+  }
+	let output = '';
+	let count = 0;
+	for(let I = 0; I < string.length; I++) {
+		if(string[I] === string[I + 1]) {
+			count ++;
+//			return stringCompress(string.slice(string[I + 1]);// unnecessary
+		}else if(string[I] != string[I + 1]) {
+			if(count === 0){
+				output += string[I];	
+	  		}else
+				output += string[I] + count;
+				count 0;
+	  }
+	}
+  }
+	return output;
+}
+
+
+2nd attempt, didn't finish
+
+Const stringCompress = (string) => {
+	if(string.length == 0) {
+		alert("please enter a valid string");
+		return;
+  }
+	let output = '';
+	let count = 0;
+	for(let I = 0; I < string.length; I++) {
+		if(string[I] == string[I + 1]) {
+			count ++;
+			for(let x = 0; x < string.length; x++){
+				if(string[x] == string[I + 2])
+					
+		}
+		}else if(string[I] != string[I + 1]) {
+			if(count == 0){
+				output += string[I];	
+	  		}else
+				output += string[I] + count;
+				count 0;
+	  }
+	}
+  }
+	return output;
+}
